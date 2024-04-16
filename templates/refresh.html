@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% set active_page = "refresh" %} {% block content %}
+<h3>Refreshing Posts...</h3>
+
+{% for member in posts_data %}
+<article>
+    <header>{{ member.name }}</header>
+    <p>Posts from {{ member.website }}</p>
+    {% if member.error %}
+    <p>Error: {{ member.error }}</p>
+    {% else %}
+    <p><ul>
+    {% for post in member.posts %}
+    <li><a href="{{ post }}">{{ post }}</a></li>
+    {% endfor %}
+    </ul></p>
+    {% endif %}
+    <footer>
+      Pulled {{ member.post_count }} posts from {{ member.source }}
+    </footer>
+</article>
+{% endfor %}
+
+{% endblock %}

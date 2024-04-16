@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+    <title>{% block title %} {% endblock %}Amateur Engineering</title>
+  </head>
+  <body>
+    <div class="grid-wrapper">
+      <header class="header">
+        <nav>
+          <ul>
+            <li>
+              <img class="logo" src="images/AEdark.png" alt="Amateur Engineering" />
+              <h1>Amateur Engineering</h1>
+            </li>
+          </ul>
+          <ul>
+            {% set navigation_bar = [ ('/', 'index', 'Home'), ('/about', 'about', 'About'), ('/bookmarks', 'bookmarks', 'Bookmarks') ] -%} {% set active_page = active_page|default('index') -%} {% for href, id, caption in navigation_bar %}
+            <li><a class="nav-link{% if id == active_page %} active{% endif %}" href="{{ href|e }}">{{ caption|e }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <hr />
+      </header>
+
+      <main class="main-content">{% block content %} {% endblock %}</main>
+      <div class="left-sidebar">
+        <hgroup>
+          <h4>Introduction</h4>
+          <p>This site is a collection of makers, hackers, tinkerers, and creators of all types writing about their hardware and software projects.</p>
+        </hgroup>
+        <hgroup>
+          <h3>Contributors</h3>
+          <p>Below is a list of contributors who currently submit project updates to this site, scraped directly from their Github/Gitlab repos.</p>
+          <ul>
+            <li>SenWerks [<a href="">Posts</a> | <a href="">Website</a>]</li>
+            <li>RobL [<a href="">Posts</a> | <a href="">Website</a>]</li>
+            <li>Firnsy [<a href="">Posts</a> | <a href="">Website</a>]</li>
+            <li>Fred [<a href="">Posts</a> | <a href="">Website</a>]</li>
+          </ul>
+          <p>If you would like to have your posts added to this website and share your projects, <a href="">submit a PR</a> and add your post repo to the list.</p>
+        </hgroup>
+      </div>
+      <footer class="footer">
+        <div class="footer-left">
+          <a href="javascript:;" id="theme-toggle">Toggle Theme</a>
+        </div>
+        <div class="footer-center"><em>Hack The Planet</em></div>
+        <div class="footer-right">
+          <a href="https://bhack.in">π</a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        themeToggle.textContent = newTheme === "dark" ? "Light Mode" : "Dark Mode";
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const currentTheme = prefersDarkScheme ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle.textContent = currentTheme === "dark" ? "Light Mode" : "Dark Mode";
+      });
+    </script>
+  </body>
+</html>

@@ -3,16 +3,20 @@ members:
   - rob:
       name: Rob
       website: "http://www.robco.com"
-      posts: "https://gitlab.com/robertlayton/gittestproject/" #GitLab Test
+      posts: "https://gitlab.com/robertlayton/gittestproject/" # GitLab with no Markdown
   - sen:
       name: SenWerks
       website: "http://www.senwerks.com"
-      posts: "https://github.com/senwerks/SenWerks.com/tree/main/content" #GitHub Test
+      posts: "https://github.com/senwerks/SenWerks.com/tree/main/content" # GitHub with Markdown/HTML (Pelican-based)
   - firnsy:
       name: Firnsy
       website: "http://www.firnsy.com"
-      posts: "https://firnsy.com/" # Not GitHub or GitLab to test error handling
+      posts: "https://gitlab.com/firnsy/firnsy.com/-/tree/master/data/posts" # GitLab with Markdown (Custom/Mojolicious-based)
   - notsen:
       name: TotallyNotSen
       website: "http://www.amateurengineering.com"
-      posts: "https://gitlab.com/senwerks/senwerks.gitlab.io/-/tree/master/_posts" #GitLab Test
+      posts: "https://gitlab.com/senwerks/senwerks.gitlab.io/-/tree/master/_posts" # GitLab with Markdown (Jekyll-based)
+  - atsen:
+      name: AtSen
+      website: "https://hackerspace.au/@sen"
+      posts: "https://hackerspace.au/@sen.rss" # Mastadon

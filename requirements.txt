@@ -1,0 +1,6 @@
+flask
+PyGithub
+python-gitlab
+pyyaml
+python-dotenv
+requests
