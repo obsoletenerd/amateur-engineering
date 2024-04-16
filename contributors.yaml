@@ -7,7 +7,7 @@ members:
   - sen:
       name: SenWerks
       website: "http://www.senwerks.com"
-      posts: "https://github.com/senwerks/SenWerks.com/content" #GitHub Test
+      posts: "https://github.com/senwerks/SenWerks.com/tree/main/content" #GitHub Test
   - firnsy:
       name: Firnsy
       website: "http://www.firnsy.com"
