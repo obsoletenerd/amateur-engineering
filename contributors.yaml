@@ -12,3 +12,7 @@ members:
       name: Firnsy
       website: "http://www.firnsy.com"
       posts: "https://firnsy.com/" # Not GitHub or GitLab to test error handling
+  - notsen:
+      name: TotallyNotSen
+      website: "http://www.amateurengineering.com"
+      posts: "https://gitlab.com/senwerks/senwerks.gitlab.io/-/tree/master/_posts" #GitLab Test
