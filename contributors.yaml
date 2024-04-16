@@ -3,7 +3,7 @@ members:
   - rob:
       name: Rob
       website: "http://www.robco.com"
-      posts: "https://gitlab.com/robertlayton/website/posts/" #GitLab Test
+      posts: "https://gitlab.com/robertlayton/gittestproject/" #GitLab Test
   - sen:
       name: SenWerks
       website: "http://www.senwerks.com"
