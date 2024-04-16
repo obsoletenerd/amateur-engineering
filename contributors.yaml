@@ -1,0 +1,10 @@
+# Fake examples for now
+members:
+  - rob:
+      name: Rob
+      website: "http://www.robco.com"
+      posts: "https://gitlab.com/robertlayton/website/posts/"
+  - sen:
+      name: SenWerks
+      website: "http://www.senwerks.com"
+      posts: "https://github.com/senwerks/SenWerks.com/tree/main/content"
