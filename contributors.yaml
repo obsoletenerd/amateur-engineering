@@ -3,8 +3,12 @@ members:
   - rob:
       name: Rob
       website: "http://www.robco.com"
-      posts: "https://gitlab.com/robertlayton/website/posts/"
+      posts: "https://gitlab.com/robertlayton/website/posts/" #GitLab Test
   - sen:
       name: SenWerks
       website: "http://www.senwerks.com"
-      posts: "https://github.com/senwerks/SenWerks.com/tree/main/content"
+      posts: "https://github.com/senwerks/SenWerks.com/tree/main/content" #GitHub Test
+  - firnsy:
+      name: Firnsy
+      website: "http://www.firnsy.com"
+      posts: "https://firnsy.com/" # Not GitHub or GitLab to test error handling
