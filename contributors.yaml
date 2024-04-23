@@ -2,13 +2,13 @@
 members:
   - name: Robert
     website: "http://www.robco.com"
-    posts_url: "https://gitlab.com/robertlayton/gittestproject/" # GitLab with no Markdown
+    posts: "https://gitlab.com/robertlayton/gittestproject/" # GitLab with no Markdown
   - name: SenWerks
     website: "http://www.senwerks.com"
-    posts_url: "https://github.com/senwerks/SenWerks.com/tree/main/content" # GitHub with Markdown/HTML (Pelican-based)
+    posts: "https://github.com/senwerks/SenWerks.com/tree/main/content" # GitHub with Markdown/HTML (Pelican-based)
   - name: Firnsy
     website: "http://www.firnsy.com"
-    posts_url: "https://gitlab.com/firnsy/firnsy.com/-/tree/master/data/posts" # GitLab with Markdown (Custom/Mojolicious-based)
+    posts: "https://gitlab.com/firnsy/firnsy.com/-/tree/master/data/posts" # GitLab with Markdown (Custom/Mojolicious-based)
   - name: TotallyNotSen
     website: "http://www.amateurengineering.com"
     posts: "https://gitlab.com/senwerks/senwerks.gitlab.io/-/tree/master/_posts" # GitLab with Markdown (Jekyll-based)
