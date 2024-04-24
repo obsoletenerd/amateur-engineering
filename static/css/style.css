@@ -18,11 +18,11 @@
     --logo: var(--logo-light);
 }
 
-header.header nav ul li h1 {
+header.header nav h1 {
     font-size: 0;
 }
 
-header.header nav ul li img {
+header.header nav img {
     content: var(--logo);
 }
     

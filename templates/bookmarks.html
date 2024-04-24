@@ -1,6 +1,20 @@
 {% extends 'base.html' %} {% set active_page = "bookmarks" %} {% block content %}
-<article>
-  <h4>Bookmarks</h4>
-  <p>Remember when people and hobby-sites had their own directories of relevant bookmarks? Let's get that going again. This page contains links to websites relating to our hobby, and you/anyone can contribute more to this list via <a href="">the GitHub repo</a>.</p>
-</article>
+<h4>Bookmarks</h4>
+<p>These bookmarks are pulled from a shared bookmarks.yaml file in our Git repository that anyone can edit with relevant links. If you think we're missing a website below, <a href="/">submit a PR</a> and we'll consider it.</p>
+<h5>Jump To Category</h5>
+{% for category, entries in bookmarks.items() %}
+<a href="#{{ category }}">{{ category }}</a>{% if not loop.last %} - {% endif %} {% endfor %}
+<hr />
+<div class="grid">
+  <div>
+    {% for category, entries in bookmarks.items() %}
+    <h5><a id="{{ category }}">{{ category }}</a></h5>
+    <ul>
+      {% for entry in entries %}
+      <li><a href="{{ entry.url }}">{{ entry.website }}</a> - {{ entry.description }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

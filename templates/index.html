@@ -1,26 +1,10 @@
-{% extends 'base.html' %} {% set active_page = "index" %} {% block content %}
+{% extends 'base.html' %} {% set active_page = "index" %} {% block content %} {% for post in posts %}
 <article>
-  <header>Solving the Australian Signals Directorate Cryptography Challenge Coin</header>
-  How myself and a mate worked through the Australian Signals Directorate cryptography channel, and neither of us having any background in cryptography but both of us having lots of background in searching crap online... we solved it.
+  <header>{{ post.title }}</header>
+  {{ post.content | safe }}
   <footer>
-    <a href="http://senwerks.com/solving-the-australian-signals-directorate-cryptography-challenge-coin.html">SenWerks</a>
-    - Thu 01 September 2022
+    <a href="{{ post.author_url }}">{{ post.author }}</a>
+    - {{ post.date.strftime('%a %d %B %Y') }}
   </footer>
 </article>
-<article>
-  <header>DIY LiPo Battery for the Original Gameboy</header>
-  Inspired by the replaceable USB-rechargeable LiPo batteries inside the Ring doorbells/cameras, I wanted something similar for my original gameboy. There's plenty of LiPo mods that require cutting up the Gameboy and/or soldering to the boards inside, but I wanted to leave the console all-original.
-  <footer>
-    <a href="http://senwerks.com/diy-lipo-battery-for-the-original-gameboy.html">SenWerks</a>
-    - Tue 20 July 2021
-  </footer>
-</article>
-<article>
-  <header>Solving the Australian Signals Directorate Cryptography Challenge Coin</header>
-  How myself and a mate worked through the Australian Signals Directorate cryptography channel, and neither of us having any background in cryptography but both of us having lots of background in searching crap online... we solved it.
-  <footer>
-    <a href="http://senwerks.com/solving-the-australian-signals-directorate-cryptography-challenge-coin.html">SenWerks</a>
-    - Thu 01 September 2022
-  </footer>
-</article>
-{% endblock %}
+{% endfor %} {% endblock %}

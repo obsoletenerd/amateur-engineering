@@ -13,12 +13,8 @@
     <div class="grid-wrapper">
       <header class="header">
         <nav>
-          <ul>
-            <li>
-              <img class="logo" src="images/AEdark.png" alt="Amateur Engineering" />
-              <h1>Amateur Engineering</h1>
-            </li>
-          </ul>
+          <img class="logo" src="images/AEdark.png" alt="Amateur Engineering" />
+          <h1>Amateur Engineering</h1>
           <ul>
             {% set navigation_bar = [ ('/', 'index', 'Home'), ('/about', 'about', 'About'), ('/bookmarks', 'bookmarks', 'Bookmarks') ] -%} {% set active_page = active_page|default('index') -%} {% for href, id, caption in navigation_bar %}
             <li><a class="nav-link{% if id == active_page %} active{% endif %}" href="{{ href|e }}">{{ caption|e }}</a></li>
@@ -33,18 +29,20 @@
         <hgroup>
           <h4>Introduction</h4>
           <p>This site is a collection of makers, hackers, tinkerers, and creators of all types writing about their hardware and software projects.</p>
+          <p>If you're interested in having your posts added to this website to share your own projects, <a href="https://github.com/senwerks/AmateurEngineering/pulls">submit a PR</a> and add your post repo to the list.</p>
         </hgroup>
-        <hgroup>
-          <h3>Contributors</h3>
-          <p>Below is a list of contributors who currently submit project updates to this site, scraped directly from their Github/Gitlab repos.</p>
-          <ul>
-            <li>SenWerks [<a href="">Posts</a> | <a href="">Website</a>]</li>
-            <li>RobL [<a href="">Posts</a> | <a href="">Website</a>]</li>
-            <li>Firnsy [<a href="">Posts</a> | <a href="">Website</a>]</li>
-            <li>Fred [<a href="">Posts</a> | <a href="">Website</a>]</li>
-          </ul>
-          <p>If you would like to have your posts added to this website and share your projects, <a href="">submit a PR</a> and add your post repo to the list.</p>
-        </hgroup>
+        <h4>Categories</h4>
+        <p>Below is a list of categories that are scraped from the member posts. We combine any "tags" and "category" metadata from posts into one list to make it easier to find relevant posts.</p>
+        <p>
+          <a href="/categories/tag1/">Hardware</a>, <a href="/categories/tag1/">Software</a>, <a href="/categories/tag1/">3D Printing</a>, <a href="/categories/tag1/">Laser Cutting</a>, <a href="/categories/tag1/">LLMs</a>, <a href="/categories/tag1/">AI</a>, <a href="/categories/tag1/">Python</a>,
+          <a href="/categories/tag1/">Arduino</a>, <a href="/categories/tag1/">Raspberry Pi</a>, <a href="/categories/tag1/">Wetware</a>, <a href="/categories/tag1/">Robotics</a>, <a href="/categories/tag1/">DIY</a>, <a href="/categories/tag1/">Projects</a>, <a href="/categories/tag1/">Update</a>,
+          <a href="/categories/tag1/">Hackerspace</a>.
+        </p>
+        <h4>Credits</h4>
+        <p>
+          This is a project by members of the <a href="https://ballarathackerspace.org.au">Ballarat Hackerspace</a>. You can see all the code for this website <a href="https://github.com/senwerks/amateurengineering/">on Github</a>, with our aim being that you can ultimately deploy this project for
+          your own social group or friends.
+        </p>
       </div>
       <footer class="footer">
         <div class="footer-left">
