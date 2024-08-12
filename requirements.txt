@@ -1,9 +1,8 @@
 flask
-PyGithub
-python-gitlab
 pyyaml
 python-dotenv
 requests
 psycopg2-binary
-markdown
+markdown # Convert the Markdown to HTML for each post when we display them
 regex
+gitpython # Clone the member Post sources from their repos

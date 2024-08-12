@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 import os
 import psycopg2
 from psycopg2 import OperationalError
+import logging
 import yaml
 import urllib.parse
-import logging
 from urllib.parse import urlparse
 import markdown
 import re
@@ -14,7 +14,6 @@ import re
 
 # Load .env vars
 load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
 members_yaml_url = os.getenv("REPO_URL")
 
 # Create the Flask app
@@ -80,6 +79,8 @@ def do_index():
 
 @app.route("/refresh/")
 def do_refresh():
+    # TODO: This crashes because get_members() is broken.
+
     conn = create_connection()
 
     # Get the list of members from the members.yaml file
@@ -243,6 +244,9 @@ def get_members(members_yaml_url):
 
     Returns a list of dictionaries with member data.
     """
+    
+    # TODO: This function is very broken.
+
     members = None
     members_data = []
 
@@ -277,13 +281,13 @@ def get_members(members_yaml_url):
                     member_data["markdown_list"] = get_github_posts(
                         member["source_url"])
 
-                # GitLab users
-                elif check_url_type(member["source_url"]) == "GITLAB":
-                    member_data["source_type"] = "GitLab"
+                # # GitLab users
+                # elif check_url_type(member["source_url"]) == "GITLAB":
+                #     member_data["source_type"] = "GitLab"
 
-                    # Get the users Markdown posts
-                    member_data["markdown_list"] = get_gitlab_posts(
-                        member["source_url"])
+                #     # Get the users Markdown posts
+                #     member_data["markdown_list"] = get_gitlab_posts(
+                #         member["source_url"])
 
                 # Add the post count to the member data
                 if member_data["markdown_list"] is not None:
@@ -317,8 +321,9 @@ def check_url_type(source_url):
     # Check the domain for known sources that we currently support
     if "github.com" in domain:
         return "GITHUB"
-    elif "gitlab.com" in domain:
-        return "GITLAB"
+    # GitLab removed until fixed:
+    # elif "gitlab.com" in domain:
+    #     return "GITLAB"
     else:
         return "OTHER"
 
@@ -344,33 +349,6 @@ def import_user(name, website_url, source_url):
     close_connection(conn)
 
     return user_id
-
-
-def convert_github_url(github_user_url):
-    """
-    Convert a GitHub www URL (that a user would see on the web) to an API URL we can use.
-
-    Usage:
-    api_url = convert_github_url(github_url) 
-    """
-    if "/tree/" in github_user_url:
-        try:
-            base_url = "https://api.github.com/repos"
-            parts = github_user_url.split("/")
-            user = parts[3]
-            repo = parts[4]
-            branch = parts[6]
-            path = "/".join(parts[7:])  # Path within the repository
-            api_url = f"{base_url}/{user}/{repo}/contents/{path}?ref={branch}"
-            app.logger.info(f"Converted GitHub WWW URL to API URL: {api_url}")
-            return api_url
-
-        except IndexError:
-            app.logger.error(f"Error parsing GitHub URL: {github_user_url}")
-            return None
-    else:
-        app.logger.error(f"Didn't recognise GitHub URL: {github_user_url}")
-        return None
 
 
 def get_github_posts(github_user_url):
@@ -432,7 +410,7 @@ def get_gitlab_posts(gitlab_user_url):  # TODO: This function is broken yo
     """
 
     # Parse the given URL to extract the necessary components
-    parsed_url = urllib.parse.urlparse(gitlab_user_url)
+    parsed_url = urlparse(gitlab_user_url)
     path_parts = parsed_url.path.split('/')
 
     # Extract the namespace and project, and the path to the directory
@@ -511,3 +489,10 @@ def import_posts(user_id, member_posts):
         # posts_imported += 1
 
     return posts_imported
+
+
+
+
+if __name__ == '__main__':
+ app.run(debug=True)
+
