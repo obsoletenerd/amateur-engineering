@@ -7,6 +7,12 @@
       "description": "Software, Hardware, and Wetware projects."
     },
     {
+      "name": "Sen",
+      "author": "Sen",
+      "url": "https://hackerspace.au/@sen.rss",
+      "description": "Testing a Mastadon RSS feed."
+    },
+    {
       "name": "dmoges.com",
       "author": "dmoges",
       "url": "https://dmoges.com/tags/hardware/index.xml",
