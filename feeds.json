@@ -5,6 +5,11 @@
       "author": "ObsoleteNerd",
       "url": "https://obsoletenerd.com/feeds/feed.rss.xml",
       "description": "Software, Hardware, and Wetware projects."
-    }
+    },
+    {
+      "name": "dmoges.com",
+      "author": "dmoges",
+      "url": "http://localhost:39607/tags/hardware/index.xml",
+      "description": "Hacky hardware and software integrated projects"
   ]
 }
