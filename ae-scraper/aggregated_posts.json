@@ -1,0 +1,105 @@
+{
+  "generated_at": "2025-09-04T21:53:36.361886",
+  "total_posts": 9,
+  "posts": [
+    {
+      "date_posted": "2025-09-04T05:00:00",
+      "date_posted_timestamp": 1756926000,
+      "title": "SAO BSides Ballarat 2026",
+      "url": "https://dmoges.com/posts/sao-bsides-ballarat-2026/",
+      "summary": "Firnsy from the Ballarat Hackerspace is developing a badge for BSides Ballarat 2026, and I thought it would be fun to add some SAOs for it.\nI have a few ideas, but I thought I&rsquo;d start small and get something out the door, before committing to larger ideas.\nSAO Basics\nA SAO in this context is a &ldquo;Simple Add-On&rdquo;, a small PCB that can be added to an existing board to provide additional functionality.\nThe &ldquo;spec&rdquo; is very simple - six pins in a 2x3 header, with VCC, GND, I...",
+      "author_name": "dmoges",
+      "author_homepage": "https://dmoges.com",
+      "blog_name": "dmoges.com",
+      "feed_url": "https://dmoges.com/tags/hardware/index.xml"
+    },
+    {
+      "date_posted": "2025-07-24T01:33:00",
+      "date_posted_timestamp": 1753284780,
+      "title": "Building a personal website using Pelican and Cloudflare",
+      "url": "https://obsoletenerd.com/building-a-personal-website-using-pelican-and-cloudflare.html",
+      "summary": "How I built this personal website and static blog with automated build-process and effectively-free hosting, using Markdown-formatted text files to write the posts, Pelican/Python to incorporate Jinja templates and build static HTML output, GitHub for version control and source hosting, and Cloudflare pages to serve the static content to the web on my personald domain name. This post will evolve into more of a tutorial/guide later. For now it is a dumping ground for my notes as I build out the s...",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    },
+    {
+      "date_posted": "2025-05-27T10:10:00",
+      "date_posted_timestamp": 1748304600,
+      "title": "Mysterious Blue 8088 IBM Clone",
+      "url": "https://obsoletenerd.com/mysterious-blue-8088-ibm-clone.html",
+      "summary": "I stumbled on this all-blue IBM PC XT clone that I haven't been able to find any information about, no matter how much I dig online. The only identifying label is on the bottom of the keyboard, which was made by Nan Tan Computer Co in Taiwan, but there is no record of them ever making desktop PCs. The keyboard is the exact same blue as the rest of the PC so was clearly along with the rest of the machine.",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    },
+    {
+      "date_posted": "2022-09-01T03:37:00",
+      "date_posted_timestamp": 1661967420,
+      "title": "Solving the Australian Signals Directorate Cryptography Challenge Coin",
+      "url": "https://obsoletenerd.com/solving-the-australian-signals-directorate-cryptography-challenge-coin.html",
+      "summary": "Today the Australian Signals Directorate announced their 75th Anniversary Commemorative Coin, which is a standard Australian 50 cent coin with various cryptographic puzzles embedded in it. I'm not a cryptography expert, but I've always loved this stuff from the sidelines of physical pentesting and teen-years script-kiddying, so I thought I'd give it a go. Along with a mate in our local Hackerspace's slack channel, we started bouncing ideas back and forth, and below is a write-up of the eventual ...",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    },
+    {
+      "date_posted": "2021-07-20T04:17:00",
+      "date_posted_timestamp": 1626718620,
+      "title": "DIY LiPo Battery for the Original Gameboy",
+      "url": "https://obsoletenerd.com/diy-lipo-battery-for-the-original-gameboy.html",
+      "summary": "I was pretty sick of worrying about the AA batteries for my original Gameboy, and just wanted a LiPo pack I could recharge via micro USB like so many of my modern devices. I found some existing projects that require cutting up the Gameboy, or modifying it in various ways... or some products from overseas that cost a fair bit and are basically just a LiPo + controller jammed into the battery cavity. I wanted something that didn't require any modification to the original Gameboy, and could be swap...",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    },
+    {
+      "date_posted": "2021-05-13T00:08:00",
+      "date_posted_timestamp": 1620828480,
+      "title": "Digispark-based USB Volume Knob",
+      "url": "https://obsoletenerd.com/digispark-based-usb-volume-knob.html",
+      "summary": "This is a very basic beginner-friendly project that gives a physical volume knob that works on most desktop/laptops. Using a rotary encoder, a Digispark microcontroller, a few soldered wires, some pre-existing firmware from Adafruit, and a 3D printed housing, we get a super tidy and tiny dial for controlling the system volume (or map it to whatever you want). It plugs directly into the side of my laptop into the USB port, or you can use it via a USB extension cable to place it on your desk.",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    },
+    {
+      "date_posted": "2020-05-15T01:21:00",
+      "date_posted_timestamp": 1589469660,
+      "title": "Arcade Macro Board for OBS",
+      "url": "https://obsoletenerd.com/arcade-macro-board-for-obs.html",
+      "summary": "Since the coronapocalypse kicked in and we've all been isolated, I've been doing a lot of Jitsi meets with various groups of friends. Jitsi is basically Zoom but with less spyware and more \"it crashes lots and has lots of bugs but it's Open Source so we convince ourselves it's worth it anyway\". In this post we use some old arcade cabinet buttons and an Arduino to build an OBS scene-changing macro board. This lets you swap scenes in video chats and when streaming, or also just works as a generic ...",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    },
+    {
+      "date_posted": "2018-10-14T23:02:00",
+      "date_posted_timestamp": 1539518520,
+      "title": "CSIRAC at Scienceworks Melbourne",
+      "url": "https://obsoletenerd.com/csirac-at-scienceworks-melbourne.html",
+      "summary": "A visit to CSIRAC (Commonwealth Scientific and Industrial Research Organisation Automatic Computer), the fourth computer ever built in the world, and the only intact first-generation computer still surviving.",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    },
+    {
+      "date_posted": "1999-12-31T12:59:00",
+      "date_posted_timestamp": 946605540,
+      "title": "The WWW Peaked in 1999",
+      "url": "https://obsoletenerd.com/the-www-peaked-in-1999.html",
+      "summary": "It's a pretty well known fact* that the World Wide Web (and arguably humanity itself) peaked in 1999, and it has been downhill ever since. Read on to find out why I'm right, why you're wrong, and why we should reset the entire WWW to 1999 and start over.",
+      "author_name": "ObsoleteNerd",
+      "author_homepage": "https://obsoletenerd.com",
+      "blog_name": "ObsoleteNerd.com",
+      "feed_url": "https://obsoletenerd.com/feeds/feed.rss.xml"
+    }
+  ]
+}
