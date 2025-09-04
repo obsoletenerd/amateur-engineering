@@ -6,6 +6,6 @@ An open-source multi-user blog/zine for makers and hackers that pulls posts from
 
 ## Contributing Content
 
-If you're a maker/hacker/etc, you can add your blog to the site by adding your Markdown source url to the `contributors.py` file. We currently support GitLab and GitHub source folders, with Markdown files that fit the Jekyll or Pelican-Markdown formats. Basically, if your Markdown posts have metadata with the "title: Title goes here" format, and then your content starts with an H1/#Heading, then we can probably parse it fine. We'll continue developing this system to parse more Markdown/metadata templates and more sources as we go.
+If you're a maker/hacker/etc, you can add your blog to the site by adding your RSS feed to the `feeds.json` file. We pull the post info from your RSS feed then aggregate it with all the other members, creating a single place to see all the updated blogs. A simplified RSS reader focussed on a specific topic.
 
 Don't have a personal project blog? Personal blogs have never been easier and later-you will thank now-you for logging your progression and development. Even a free GitHub Pages site using Jekyll is a great way to get started and takes 15 minutes to set up.
