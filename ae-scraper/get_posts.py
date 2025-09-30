@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """
 Aggregates Posts for AmateurEngineering.com Blog
-- Pulls each user's post content from their individual git repos
-- Converts each post file to fit Pelican posting standards (metadata format etc)
-- Adds specific metadata for the Amateur Engineering site itself
-- Pushes post content to the Amateur Engineering repo for Cloudflare workers to build
+
+Goals:
+    - Take the JSON file and break it out into the types of sources we need to pull
+    - RSS feeds are turned into mini posts with some custom metadata so we can format it appropriately
+    - Clone user repos and copy their content files into /sources/userdomain.tld/ in their original format
+    - Convert each file to suit our Pelican blog and copy to /content/userdomain.tld/
+        - Modify their metadata to suit, add our specific fields we want
+        - Convert image paths to absolute paths with the user's domain at the start
+    - Pushes to the Amateur Engineering repo for Cloudflare worker to build
 """
 
 
