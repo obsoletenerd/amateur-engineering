@@ -3,6 +3,7 @@ SITENAME = 'Amateur Engineering'
 SITEURL = ""
 
 PATH = "content"
+USE_FOLDER_AS_CATEGORY = True
 
 TIMEZONE = 'Australia/Melbourne'
 
