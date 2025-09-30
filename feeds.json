@@ -3,19 +3,19 @@
     {
       "name": "ObsoleteNerd.com",
       "author": "ObsoleteNerd",
-      "url": "https://obsoletenerd.com/feeds/feed.rss.xml",
+      "rss": "https://obsoletenerd.com/feeds/feed.rss.xml",
+      "url": "https://obsoletenerd.com",
+      "posts": "https://github.com/obsoletenerd/obsoletenerd.com/tree/main/content",
+      "type": "pelican",
       "description": "Software, Hardware, and Wetware projects."
-    },
-    {
-      "name": "Sen",
-      "author": "Sen",
-      "url": "https://hackerspace.au/@sen.rss",
-      "description": "Testing a Mastadon RSS feed."
     },
     {
       "name": "dmoges.com",
       "author": "dmoges",
-      "url": "https://dmoges.com/tags/hardware/index.xml",
+      "rss": "https://dmoges.com/tags/hardware/index.xml",
+      "url": "https://dmoges.com",
+      "posts": "https://gitlab.com/robertlayton/dmoges/-/tree/main/content/posts?ref_type=heads",
+      "type": "hugo",
       "description": "Hacky hardware and software integrated projects"
     }
   ]
