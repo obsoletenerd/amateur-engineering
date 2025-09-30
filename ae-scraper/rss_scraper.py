@@ -2,10 +2,6 @@
 """
 RSS Feed Aggregator for Amateur Engineering Webring
 Fetches RSS feeds from a GitHub-hosted JSON list and extracts post details
-
-TODO: Build an API for posts to be saved to and read from
-TODO: Modify this script to use the API to check last post-date added, and only add new ones after that date
-TODO: Figure out what to do about people editing/deleting their posts
 """
 
 import json
