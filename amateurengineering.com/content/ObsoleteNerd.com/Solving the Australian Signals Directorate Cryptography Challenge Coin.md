@@ -1,9 +1,10 @@
 ---
 Title: Solving the Australian Signals Directorate Cryptography Challenge Coin
+Author: Obsolete Nerd
 Date: 2022-09-01 13:37
 Modified: 2022-09-01 13:37
 Summary: Today the Australian Signals Directorate announced their 75th Anniversary Commemorative Coin, which is a standard Australian 50 cent coin with various cryptographic puzzles embedded in it. I'm not a cryptography expert, but I've always loved this stuff from the sidelines of physical pentesting and teen-years script-kiddying, so I thought I'd give it a go. Along with a mate in our local Hackerspace's slack channel, we started bouncing ideas back and forth, and below is a write-up of the eventual path to solving all the puzzles on the coin (though as you'll see, not necessarily in the order they intended).
-Category: Misc
+Category: CTF
 Tags: CTF
 Status: Published
 ---
@@ -13,7 +14,7 @@ Today the Australian Signals Directorate announced their [75th Anniversary Comme
 The coin itself looks like this:
 
 <center>
-<img alt="ASD 50c Coin" src="{static}/images/2022-09-01-ASD-50c-Coin.png" width="80%">
+<img alt="ASD 50c Coin" src="/images/2022-09-01-ASD-50c-Coin.png" width="80%">
 </center>
 
 The first thing we did is transcribe the text from the coin to a note file, so we had it copy-pastable:
@@ -47,7 +48,7 @@ The press release made lots of mention of WWII code breakers, and had the word "
 Throwing the first string in the "Outer Ring" part of our notes and choosing Atbash Cipher in Cyberchef gave me readable text:
 
 <center>
-<img alt="ASD 50c Coin - weareaudaciousinconceptandmeticulousinexecution" src="{static}/images/2022-09-01-ASD-50c-Coin-3.png" width="80%">
+<img alt="ASD 50c Coin - weareaudaciousinconceptandmeticulousinexecution" src="/images/2022-09-01-ASD-50c-Coin-3.png" width="80%">
 </center>
 
 The output reads:
@@ -59,7 +60,7 @@ weareaudaciousinconceptandmeticulousinexecution
 Throwing in the 2nd string from the same part gives:
 
 <center>
-<img alt="ASD 50c Coin - findclarityin7widthx5depth" src="{static}/images/2022-09-01-ASD-50c-Coin-4.png" width="80%">
+<img alt="ASD 50c Coin - findclarityin7widthx5depth" src="/images/2022-09-01-ASD-50c-Coin-4.png" width="80%">
 </center>
 
 The output reads:
@@ -73,7 +74,7 @@ The first part is a reference to the ASD "Values", as seen [on their website](ht
 At this point I figured out the dots on the Heads side of the coin could be some form of grid pattern, and looked up the [Wikipedia entry on Braille](https://en.wikipedia.org/wiki/Braille). In there, was this section showing that a 4-dot version of Braille is used to show both the start of the alphabet and also numbers 0-9.
 
 <center>
-<img alt="ASD 50c Coin - Braille" src="{static}/images/2022-09-01-ASD-50c-Coin-5.png" width="80%">
+<img alt="ASD 50c Coin - Braille" src="/images/2022-09-01-ASD-50c-Coin-5.png" width="80%">
 </center>
 
 I translated it in our notes to show that the symbols could now either mean "C B F A E D" or "3 2 6 1 5 4". My mate noted that the letters above each Braille symbol, when re-ordered into numerical order based on those Braille numbers before, spells out ATBASH... oh wait, we already figured that puzzle out (thanks Cyberchef, I love you).
@@ -100,7 +101,7 @@ nmdrxx5
 Clearly the "XOR HEX a5d75" part is the clue, and I know what a XOR gate is... but I didn't realise there was also a "XOR Cipher" until doing some more web searching (again, not an expert). My search came up with the Wikipedia page about XOR Ciphers, and an example, but more helpfully came up with this ["XOR of two hexadecimal strings" tool](https://tomeko.net/online_tools/xor.php?lang=en) right on the first page. In VS Code I repeated the "a5d75" key until it was the same length as the source text (as per the Wikipedia example) and plugged them into the tool:
 
 <center>
-<img alt="ASD 50c Coin - XOR Cipher" src="{static}/images/2022-09-01-ASD-50c-Coin-6.png" width="80%">
+<img alt="ASD 50c Coin - XOR Cipher" src="/images/2022-09-01-ASD-50c-Coin-6.png" width="80%">
 </center>
 
 The output reads:
@@ -123,7 +124,7 @@ The output reads:
 Throw that back into Cyberchef again, and we get the final answer to all the puzzles:
 
 <center>
-<img alt="ASD 50c Coin - Final Output" src="{static}/images/2022-09-01-ASD-50c-Coin-7.png" width="80%">
+<img alt="ASD 50c Coin - Final Output" src="/images/2022-09-01-ASD-50c-Coin-7.png" width="80%">
 </center>
 
 The output reads:

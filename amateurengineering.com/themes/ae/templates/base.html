@@ -70,45 +70,42 @@
             projects.
           </p>
         </hgroup>
-        <hgroup>
-          <h3>Contributors</h3>
-          <p>
-            Below is a list of contributors who currently submit project updates
-            to this site, scraped directly from their Github/Gitlab repos.
-          </p>
-          <ul>
-            <li>SenWerks [<a href="">Posts</a> | <a href="">Website</a>]</li>
-            <li>RobL [<a href="">Posts</a> | <a href="">Website</a>]</li>
-            <li>Firnsy [<a href="">Posts</a> | <a href="">Website</a>]</li>
-            <li>Fred [<a href="">Posts</a> | <a href="">Website</a>]</li>
-          </ul>
-          <p>
-            If you would like to have your posts added to this website and share
-            your projects, <a href="">submit a PR</a> and add your post repo to
-            the list.
-          </p>
-        </hgroup>
-
         {% block nav %}
-        <hgroup>
-            <h3>Menu</h3>
-            <nav><ul>
-            {% for title, link in MENUITEMS %}
-              <li><a href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
 
-            {% if DISPLAY_PAGES_ON_MENU %}
+        {% if DISPLAY_PAGES_ON_MENU %}
+        <hgroup>
+            <h3>Pages</h3>
+            <nav><ul>
+
             {% for p in pages %}
               <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></li>
             {% endfor %}
-            {% endif %}
 
-            {% if DISPLAY_CATEGORIES_ON_MENU %}
-            {% for cat, null in categories %}
-              <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
+            {% if MENUITEMS %}
+            {% for title, link in MENUITEMS %}
+              <li><a href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
             {% endif %}
             </ul></nav>
+        </hgroup>
+        {% endif %}
+
+        {% if DISPLAY_CATEGORIES_ON_MENU %}
+        <hgroup>
+            <h3>Categories</h3>
+            <nav><ul>
+            {% for cat, null in categories %}
+              <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
+            {% endfor %}
+            </ul></nav>
+        </hgroup>
+        {% endif %}
+
+        <hgroup>
+          <h3>Contributors</h3>
+          <p>
+            Content on this site is collated from members' personal websites, automatically cross-posting into this community for shared reach. You can view the current contributor list or if you are a maker/hacker who would like to add your own project site, you can do a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> on our <a href="https://github.com/obsoletenerd/amateur-engineering/blob/main/feeds.json">feeds.json</a> file to add your blog and we will consider adding it.
+          </p>
         </hgroup>
         {% endblock nav %}
 

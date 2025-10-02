@@ -2,9 +2,9 @@
 Title: "What is Amateur Engineering?"
 Date: 2025-01-01 13:37
 Modified: 2025-01-01 13:37
-Summary: This article explains the goals behind AmateurEngineering.com, and what we mean when we refer to Amateur Engineering as a phrase.
-Category: [amateurengineering]
-Tags: [random]
+Summary: Amateur Engineering is the act of building stuff for the sake of building stuff, rather than because you were paid to do it for someone else. Putting as much effort and skill as you can into making a project for no other reason than to see it made. This article explains the goals behind AmateurEngineering.com, and more about what we mean when we refer to Amateur Engineering as a phrase.
+Category: AmateurEngineering
+Tags: Random
 Status: published
 ---
 

@@ -12,6 +12,10 @@ TIMEZONE = 'Australia/Melbourne'
 DEFAULT_LANG = 'en'
 
 THEME = 'themes/ae'
+DEFAULT_CATEGORY = "Random"
+
+DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -22,9 +26,8 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
+    ("Obsolete Nerd", "https://obsoletenerd.com/"),
+    ("Dmoges", "https://dmoges.com/"),
 )
 
 # Social widget
