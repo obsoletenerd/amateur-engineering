@@ -1,152 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
-  <head>
-    {% block head %}
-      <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
-      <meta charset="utf-8" />
-      <meta name="generator" content="Pelican" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="color-scheme" content="light dark" />
-      {% if SITESUBTITLE %}
+    <head>
+        {% block head %}
+        <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="light dark" />
+        {% if SITESUBTITLE %}
         <meta name="description" content="{{ SITESUBTITLE }}" />
-      {% endif %}
-      {% if FEED_ALL_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
-      {% endif %}
-      {% if FEED_ALL_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
-      {% endif %}
-      {% if FEED_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
-      {% endif %}
-      {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
-      {% endif %}
-      {% if CATEGORY_FEED_ATOM and category %}
-        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
-      {% endif %}
-      {% if CATEGORY_FEED_RSS and category %}
-        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
-      {% endif %}
-      {% if TAG_FEED_ATOM and tag %}
-        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
-      {% endif %}
-      {% if TAG_FEED_RSS and tag %}
-        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
-      {% endif %}
-
-      <link rel="stylesheet" href="/css/nano.css" />
-      <link rel="stylesheet" href="/css/style.css" />
-
-    {% endblock head %}
-  </head>
-
-  <body>
-    {% block body %}
-       <div class="grid-wrapper">
-
-      {% block header %}
-      <header class="header">
-        <a href="/"><img class="logo" src="/images/AEdark.png" alt="Amateur Engineering" /></a>
-        <hgroup>
-        <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-        {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
-        </hgroup>
-        <hr />
-      </header>
-      {% endblock header %}
-
-      <main class="main-content">
-        {% block content %}
-        {% endblock content %}
-      </main>
-
-      <div class="left-sidebar">
-        <hgroup>
-          <h4>Introduction</h4>
-          <p>
-            This site is a collection of makers, hackers, tinkerers, and
-            creators of all types writing about their hardware and software
-            projects.
-          </p>
-        </hgroup>
-        {% block nav %}
-
-        {% if DISPLAY_PAGES_ON_MENU %}
-        <hgroup>
-            <h3>Pages</h3>
-            <nav><ul>
-
-            {% for p in pages %}
-              <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></li>
-            {% endfor %}
-
-            {% if MENUITEMS %}
-            {% for title, link in MENUITEMS %}
-              <li><a href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
-            {% endif %}
-            </ul></nav>
-        </hgroup>
+        {% endif %} {% if FEED_ALL_ATOM %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} Full Atom Feed"
+        />
+        {% endif %} {% if FEED_ALL_RSS %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} Full RSS Feed"
+        />
+        {% endif %} {% if FEED_ATOM %}
+        <link
+            href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} Atom Feed"
+        />
+        {% endif %} {% if FEED_RSS %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} RSS Feed"
+        />
+        {% endif %} {% if CATEGORY_FEED_ATOM and category %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} Categories Atom Feed"
+        />
+        {% endif %} {% if CATEGORY_FEED_RSS and category %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} Categories RSS Feed"
+        />
+        {% endif %} {% if TAG_FEED_ATOM and tag %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} Tags Atom Feed"
+        />
+        {% endif %} {% if TAG_FEED_RSS and tag %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME|striptags }} Tags RSS Feed"
+        />
         {% endif %}
 
-        {% if DISPLAY_CATEGORIES_ON_MENU %}
-        <hgroup>
-            <h3>Categories</h3>
-            <nav><ul>
-            {% for cat, null in categories %}
-              <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
-            {% endfor %}
-            </ul></nav>
-        </hgroup>
-        {% endif %}
+        <link rel="stylesheet" href="/css/nano.css" />
+        <link rel="stylesheet" href="/css/style.css" />
 
-        <hgroup>
-          <h3>Contributors</h3>
-          <p>
-            Content on this site is collated from members' personal websites, automatically cross-posting into this community for shared reach. You can view the current contributor list or if you are a maker/hacker who would like to add your own project site, you can do a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> on our <a href="https://github.com/obsoletenerd/amateur-engineering/blob/main/feeds.json">feeds.json</a> file to add your blog and we will consider adding it.
-          </p>
-        </hgroup>
-        {% endblock nav %}
+        {% endblock head %}
+    </head>
 
-      </div>
-      <footer class="footer">
-        {% block footer %}
-        <div class="footer-left">
-          <a href="javascript:;" id="theme-toggle">Toggle Theme</a>
+    <body>
+        {% block body %}
+        <div class="grid-wrapper">
+            {% block header %}
+            <header class="header">
+                <a href="/"><img class="logo" src="/images/AEdark.png" alt="Amateur Engineering" /></a>
+                <hgroup>
+                    <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+                    {% if SITESUBTITLE %}
+                    <p>{{ SITESUBTITLE }}</p>
+                    {% endif %}
+                </hgroup>
+                <hr />
+            </header>
+            {% endblock header %}
+
+            <main class="main-content">{% block content %} {% endblock content %}</main>
+
+            <div class="left-sidebar">
+                <hgroup>
+                    <h4>Introduction</h4>
+                    <p>
+                        This site is a collection of makers, hackers, tinkerers, and creators of all types writing about their
+                        hardware and software projects.
+                    </p>
+                </hgroup>
+                {% block nav %} {% if DISPLAY_PAGES_ON_MENU %}
+                <hgroup>
+                    <h3>Pages</h3>
+                    <nav>
+                        <ul>
+                            {% for p in pages %}
+                            <li>
+                                <a href="{{ SITEURL }}/{{ p.url }}" {% if p="" ="page" %} aria-current="page" {% endif %}
+                                    >{{ p.title }}</a
+                                >
+                            </li>
+                            {% endfor %} {% if MENUITEMS %} {% for title, link in MENUITEMS %}
+                            <li><a href="{{ link }}">{{ title }}</a></li>
+                            {% endfor %} {% endif %}
+                        </ul>
+                    </nav>
+                </hgroup>
+                {% endif %} {% if DISPLAY_CATEGORIES_ON_MENU %}
+                <hgroup>
+                    <h3>Categories</h3>
+                    <nav>
+                        <ul>
+                            {% for cat, null in categories %}
+                            <li>
+                                <a
+                                    href="{{ SITEURL }}/{{ cat.url }}"
+                                    {%
+                                    if
+                                    cat=""
+                                    ="category"
+                                    %}
+                                    aria-current="page"
+                                    {%
+                                    endif
+                                    %}
+                                    >{{ cat}}</a
+                                >
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </hgroup>
+                {% endif %}
+
+                <hgroup>
+                    <h3>Contributors</h3>
+                    <p>
+                        Content on this site is collated from members' personal websites, automatically cross-posting into this
+                        community for shared reach. You can view the current contributor list or if you are a maker/hacker who
+                        would like to add your own project site, you can do a
+                        <a
+                            href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+                            >pull request</a
+                        >
+                        on our
+                        <a href="https://github.com/obsoletenerd/amateur-engineering/blob/main/feeds.json">feeds.json</a> file
+                        to add your blog and we will consider adding it.
+                    </p>
+                </hgroup>
+                {% endblock nav %}
+            </div>
+            <footer class="footer">
+                {% block footer %}
+                <div class="footer-left">
+                    <a href="javascript:;" id="theme-toggle">Toggle Theme</a>
+                </div>
+                <div class="footer-center"><em>Hack The Planet</em></div>
+                <div class="footer-right">
+                    <a href="https://bhack.in">π</a>
+                </div>
+                {% endblock footer %}
+            </footer>
         </div>
-        <div class="footer-center"><em>Hack The Planet</em></div>
-        <div class="footer-right">
-          <a href="https://bhack.in">π</a>
-        </div>
-        {% endblock footer %}
-      </footer>
+        <script>
+            const themeToggle = document.getElementById("theme-toggle");
+            themeToggle.addEventListener("click", () => {
+                const currentTheme = document.documentElement.getAttribute("data-theme");
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                document.documentElement.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+                themeToggle.textContent = newTheme === "dark" ? "Light Mode" : "Dark Mode";
+            });
 
-    </div>
-    <script>
-      const themeToggle = document.getElementById("theme-toggle");
-      themeToggle.addEventListener("click", () => {
-        const currentTheme =
-          document.documentElement.getAttribute("data-theme");
-        const newTheme = currentTheme === "dark" ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", newTheme);
-        themeToggle.textContent =
-          newTheme === "dark" ? "Light Mode" : "Dark Mode";
-      });
+            document.addEventListener("DOMContentLoaded", () => {
+                const savedTheme = localStorage.getItem("theme");
+                let currentTheme;
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const prefersDarkScheme = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        const currentTheme = prefersDarkScheme ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", currentTheme);
-        const themeToggle = document.getElementById("theme-toggle");
-        themeToggle.textContent =
-          currentTheme === "dark" ? "Light Mode" : "Dark Mode";
-      });
-    </script>
+                if (savedTheme) {
+                    currentTheme = savedTheme;
+                } else {
+                    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                    currentTheme = prefersDarkScheme ? "dark" : "light";
+                }
 
+                document.documentElement.setAttribute("data-theme", currentTheme);
+                const themeToggle = document.getElementById("theme-toggle");
+                themeToggle.textContent = currentTheme === "dark" ? "Light Mode" : "Dark Mode";
+            });
+        </script>
 
-    {% endblock body %}
-  </body>
+        {% endblock body %}
+    </body>
 </html>
