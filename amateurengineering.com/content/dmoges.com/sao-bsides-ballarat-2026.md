@@ -7,6 +7,7 @@ Author: dmoges
 Author-URL: https://dmoges.com
 Category: dmoges
 Status: published
+Cover: https://dmoges.com/images/sao-bsides-ballarat-2026/image-5.png
 ---
 
 Firnsy from the Ballarat Hackerspace is developing a badge for BSides Ballarat 2026, and I thought it would be fun to add some SAOs for it.

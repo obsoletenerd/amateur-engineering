@@ -8,6 +8,7 @@ Tags: Writing, Misc
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
+Cover: https://obsoletenerd.com/theme/images/banghead.gif
 ---
 
 It's a pretty well known fact* that the World Wide Web (and arguably humanity itself) peaked in 1999, and it has been downhill ever since. Sure, computers and tech have gotten better "technically" since then, but let's be real, the user experience has gone to crap. Websites went from fun expressions of individual personality and mass sharing of information with the intent of becoming all of humanities knowledge at your finger tips, to gargantuan piles of garbage manufactured to brainwash, manipulate, and destroy society all for the sake of making a few rich people richer.

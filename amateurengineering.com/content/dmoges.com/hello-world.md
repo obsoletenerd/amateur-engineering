@@ -6,6 +6,7 @@ Author: dmoges
 Author-URL: https://dmoges.com
 Category: dmoges
 Status: published
+Cover: https://dmoges.com/<../../assets/hello-world/BRAIN monogramlogo.svg>
 ---
 
 Time to create a devblog. Details are in this post.

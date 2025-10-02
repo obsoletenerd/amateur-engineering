@@ -6,6 +6,7 @@ Author: dmoges
 Author-URL: https://dmoges.com
 Category: dmoges
 Status: published
+Cover: https://dmoges.com/images/bsides-ctf-hidden-bio-osint/image.png
 ---
 
 This was the most basic challenge for the BSides CTF 2025, designed to just get people started.

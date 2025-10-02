@@ -8,6 +8,7 @@ Tags: Projects, Hardware, Software, 3DPrinting, Projects
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
+Cover: https://obsoletenerd.com/images/2020-05-15-Arcade-Macro-Board-ArcadeMacroKeyboard1.jpg
 ---
 
 Since the coronapocalypse kicked in and we've all been isolated, I've been doing a lot of Jitsi meets with various groups of friends. Jitsi is basically Zoom but with less spyware and more "it crashes lots and has lots of bugs but it's Open Source so we convince ourselves it's worth it anyway". We'll get togther for a video chat, and thanks to [OBS (open source broadcasting software)](https://obsproject.com/) we can do things like sharing our screens to each other while video chatting, or play a board game and have one person contol and share the board view while everyone else chats and says their moves, and lots more.

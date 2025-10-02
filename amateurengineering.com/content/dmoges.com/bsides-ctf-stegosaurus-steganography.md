@@ -6,6 +6,7 @@ Author: dmoges
 Author-URL: https://dmoges.com
 Category: dmoges
 Status: published
+Cover: https://dmoges.com/images/bsides-ctf-stegosaurus-steganography/stegosaurus-challenge.png
 ---
 
 This challenge was the most difficult I created for BSides CTF 2025.

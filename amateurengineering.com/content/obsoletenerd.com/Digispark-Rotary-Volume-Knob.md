@@ -8,6 +8,7 @@ Tags: Projects, Hardware, Software, 3DPrinting, Projects
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
+Cover: https://raw.githubusercontent.com/obsoletenerd/digispark-volume-knob/main/Meta/DigisparkVolumeKnob-Desktop.jpg
 ---
 
 My mechanical keyboard doesn't have media keys for volume/mute and while it's possible to map key combos to do the job, I've always preferred the tactile feedback of physical volume knobs. After making various other USB HID devices like a ["real" analog USB handbrake](https://github.com/obsoletenerd/analog-usb-handbrake) for my racing sim and my [arcade button macro board](http://obsoletenerd.com/arcade-macro-board-for-obs.html) for keyboard shortcuts, I figured making a volume knob should be easy enough. As is usual for me, I spent a solid evening looking up USB HID standards for media keys on standard desktop/laptop keyboards and got a prototype working using some very hacky code... then while doing some different searches on getting the Adafruit rotary encoder to work I came across [Adafruit's own tutorial](https://learn.adafruit.com/trinket-usb-volume-knob/) on making **exactly** this project, complete with fully working code for my exact encoder... typical. There has to be a name for that moment in projects where you've spent many hours trying to do something complicated, only to realise someone else has solved it and it's super easy.

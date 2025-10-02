@@ -6,6 +6,7 @@ Author: dmoges
 Author-URL: https://dmoges.com
 Category: dmoges
 Status: published
+Cover: /images/placeholder.jpg
 ---
 
 This was my most ambitious challenge for BSides CTF 2025 - a multi-stage network penetration scenario running on a Raspberry Pi. I wanted participants to experience a realistic attack chain, starting from WiFi access all the way to compromising internal services.

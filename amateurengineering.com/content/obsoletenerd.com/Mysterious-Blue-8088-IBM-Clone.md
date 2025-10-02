@@ -8,6 +8,7 @@ Tags: Hardware, Museum, Retrocomputing
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
+Cover: https://obsoletenerd.com/images/2025-05-27-Blue-8088-PC-6.jpg
 ---
 
 *This is one of a series of blog posts about retro technology that I have collected over the years, under the [Museum](https://obsoletenerd.com/tag/museum) tag. These will be "live articles" that I update over time as I learn more about the piece of tech, or do work restoring/fixing/updating it. If the article has been updated, the metadata will reflect the date of the last update.*

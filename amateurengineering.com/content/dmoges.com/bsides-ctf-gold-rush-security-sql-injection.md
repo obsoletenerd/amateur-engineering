@@ -6,6 +6,7 @@ Author: dmoges
 Author-URL: https://dmoges.com
 Category: dmoges
 Status: published
+Cover: /images/placeholder.jpg
 ---
 
 I wanted a classic web vulnerability for the BSides CTF 2025, and SQL injection felt perfect.

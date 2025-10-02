@@ -8,6 +8,7 @@ Tags: Projects, Hardware, 3DPrinting, Projects
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
+Cover: https://obsoletenerd.com/images/2021-07-20-DMG01-LiPo-07.jpg
 ---
 
 I was pretty sick of worrying about the AA batteries for my original Gameboy, and just wanted a LiPo pack I could recharge via micro USB like so many of my modern devices. I found some existing projects that require cutting up the Gameboy, or modifying it in various ways... or some products from overseas that cost a fair bit and are basically just a LiPo + controller jammed into the battery cavity. I wanted something that didn't require any modification to the original Gameboy, and could be swapped back and forth with normal AAs if required.

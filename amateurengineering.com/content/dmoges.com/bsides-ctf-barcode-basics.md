@@ -6,6 +6,7 @@ Author: dmoges
 Author-URL: https://dmoges.com
 Category: dmoges
 Status: published
+Cover: https://dmoges.com/images/bsides-ctf-barcode-basics/barcode.png
 ---
 
 The Barcode challen was one of the first challenges I thought of when I started planning the BSides CTF 2025. It is a simple challenge that introduces participants to barcode analysis and decoding, specifically focusing on Code39 barcodes.

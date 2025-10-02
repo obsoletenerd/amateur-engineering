@@ -8,6 +8,7 @@ Tags: Software, Projects, Projects
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
+Cover: /images/placeholder.jpg
 ---
 
 This post will evolve into more of a tutorial/guide later. For now it is a dumping ground for my notes as I build out the site. These are the steps I took to spin up this very website. It took about 2 hours start-to-finish.

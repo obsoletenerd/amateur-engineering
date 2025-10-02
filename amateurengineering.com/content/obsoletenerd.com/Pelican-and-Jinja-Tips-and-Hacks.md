@@ -8,6 +8,7 @@ Tags: Software, Projects, Projects
 Status: Draft
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
+Cover: https://obsoletenerd.com/theme/images/new.gif
 ---
 
 In this post I go over some of the hacks and customisations I've done to this site's back-end ([Pelican](https://getpelican.com)), and the Jinja templates used inside it.
