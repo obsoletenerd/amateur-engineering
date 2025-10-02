@@ -89,7 +89,10 @@
             </header>
             {% endblock header %}
 
-            <main class="main-content">{% block content %} {% endblock content %}</main>
+            <main class="main-content">
+            {% block content %}
+            {% endblock content %}
+            </main>
 
             <div class="left-sidebar">
                 <hgroup>
@@ -99,16 +102,15 @@
                         hardware and software projects.
                     </p>
                 </hgroup>
-                {% block nav %} {% if DISPLAY_PAGES_ON_MENU %}
+                {% block nav %}
+                {% if DISPLAY_PAGES_ON_MENU %}
                 <hgroup>
                     <h3>Pages</h3>
                     <nav>
                         <ul>
                             {% for p in pages %}
                             <li>
-                                <a href="{{ SITEURL }}/{{ p.url }}" {% if p="" ="page" %} aria-current="page" {% endif %}
-                                    >{{ p.title }}</a
-                                >
+                                <a href="{{ SITEURL }}/{{ p.url }}" {% if p=="page" %}aria-current="page"{% endif %}>{{ p.title }}</a>
                             </li>
                             {% endfor %} {% if MENUITEMS %} {% for title, link in MENUITEMS %}
                             <li><a href="{{ link }}">{{ title }}</a></li>
@@ -123,19 +125,7 @@
                         <ul>
                             {% for cat, null in categories %}
                             <li>
-                                <a
-                                    href="{{ SITEURL }}/{{ cat.url }}"
-                                    {%
-                                    if
-                                    cat=""
-                                    ="category"
-                                    %}
-                                    aria-current="page"
-                                    {%
-                                    endif
-                                    %}
-                                    >{{ cat}}</a
-                                >
+                                <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat=="category" %}aria-current="page"{% endif %}>{{ cat }}</a>
                             </li>
                             {% endfor %}
                         </ul>
@@ -149,13 +139,8 @@
                         Content on this site is collated from members' personal websites, automatically cross-posting into this
                         community for shared reach. You can view the current contributor list or if you are a maker/hacker who
                         would like to add your own project site, you can do a
-                        <a
-                            href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
-                            >pull request</a
-                        >
-                        on our
-                        <a href="https://github.com/obsoletenerd/amateur-engineering/blob/main/feeds.json">feeds.json</a> file
-                        to add your blog and we will consider adding it.
+                        <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a>
+                        on our <a href="https://github.com/obsoletenerd/amateur-engineering/blob/main/feeds.json">feeds.json</a> file to add your blog and we will consider adding it.
                     </p>
                 </hgroup>
                 {% endblock nav %}
@@ -198,7 +183,6 @@
                 themeToggle.textContent = currentTheme === "dark" ? "Light Mode" : "Dark Mode";
             });
         </script>
-
         {% endblock body %}
     </body>
 </html>
