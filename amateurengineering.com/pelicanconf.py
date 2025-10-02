@@ -4,7 +4,6 @@ SITESUBTITLE = '"Perfect is the enemy of done"'
 SITEURL = ""
 
 PATH = "content"
-STATIC_PATHS = ["../files"]
 
 TIMEZONE = 'Australia/Melbourne'
 
