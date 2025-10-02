@@ -1,13 +1,17 @@
 AUTHOR = 'Amateur Engineering'
 SITENAME = 'Amateur Engineering'
+SITESUBTITLE = '"Perfect is the enemy of done"'
 SITEURL = ""
 
 PATH = "content"
+STATIC_PATHS = ['images','css']
 USE_FOLDER_AS_CATEGORY = True
 
 TIMEZONE = 'Australia/Melbourne'
 
 DEFAULT_LANG = 'en'
+
+THEME = 'themes/ae'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

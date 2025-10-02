@@ -7,3 +7,9 @@ This blog is a bit different to most in a technical way though, as it is actuall
 We're big believers in the old-web and the benefits of having your own domain, your own website, and control over the content you choose to publish online.
 
 New members are always welcome. If you're a maker/hacker/tinkerer of any kind, from electronics to woodworking and everything in between, add your blog to the members.yaml file in this repo or [contact us](https://www.amateurengineering.com/contact) for help and/or more information.
+
+## Technical Notes
+
+Build the blog locally with `uv run pelican content`
+
+Run local dev server with `uv run pelican -r -l` then access at `http://127.0.0.1:8000`
