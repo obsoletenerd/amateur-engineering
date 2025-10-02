@@ -1,12 +1,10 @@
-# Environments
 .env
 .venv
 env/
 venv/
 ENV/
-
-# Rope project settings
 .ropeproject
+__pycache__
 
 # VSCode
 .vscode/

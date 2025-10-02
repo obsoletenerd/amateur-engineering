@@ -4,8 +4,8 @@ Author: Author Name
 Author-URL: Author's Personal URL
 Date: 2025-01-01 13:37
 Summary: A summary of the blog post goes here. Make it a few lines long, either by summarising the actual content of the entire post, introducing what the post is going to talk about, or just include the first paragraph or 2 from the post content.
-Category: Category1, Category2
-Tags: Tag1, Tag2, Tag3
+Category: Author Name
+Tags: Tag1, Tag2, Tag3, OriginalCategory1, OriginalCategory2
 Status: published
 ---
 
