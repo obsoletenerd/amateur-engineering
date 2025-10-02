@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: Projects, Hardware, 3DPrinting, Projects
 Status: Published
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: https://obsoletenerd.com/images/2021-07-20-DMG01-LiPo-07.jpg
 ---
 

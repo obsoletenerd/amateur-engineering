@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: Software, Projects, Projects
 Status: Draft
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: https://obsoletenerd.com/theme/images/new.gif
 ---
 

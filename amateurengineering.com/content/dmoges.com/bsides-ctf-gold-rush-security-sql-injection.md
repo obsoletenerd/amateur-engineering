@@ -3,7 +3,7 @@ Title: BSides 2025 CTF: Gold Rush Security - SQL Injection Challenge
 Date: 2025-07-24T12:00:00+10:00
 Tags: ctf, cybersecurity, bsides2025
 Author: dmoges
-Author-URL: https://dmoges.com
+AuthorURL: https://dmoges.com
 Category: dmoges
 Status: published
 Cover: /images/placeholder.jpg

@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: Writing, Misc
 Status: Published
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: https://obsoletenerd.com/theme/images/banghead.gif
 ---
 

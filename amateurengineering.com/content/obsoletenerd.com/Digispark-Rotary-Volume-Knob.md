@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: Projects, Hardware, Software, 3DPrinting, Projects
 Status: Published
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: https://raw.githubusercontent.com/obsoletenerd/digispark-volume-knob/main/Meta/DigisparkVolumeKnob-Desktop.jpg
 ---
 

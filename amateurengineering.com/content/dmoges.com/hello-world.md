@@ -3,7 +3,7 @@ Title: Hello World
 Date: 2025-07-09
 Tags: devblog, hello
 Author: dmoges
-Author-URL: https://dmoges.com
+AuthorURL: https://dmoges.com
 Category: dmoges
 Status: published
 Cover: https://dmoges.com/<../../assets/hello-world/BRAIN monogramlogo.svg>

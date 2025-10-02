@@ -4,7 +4,7 @@ Date: 2025-09-04T15:00:00+10:00
 Summary: A simple SAO (Simple Add-On) I designed for BSides Ballarat 2026
 Tags: hardware, bsides, sao, bsides-2026, ballarat
 Author: dmoges
-Author-URL: https://dmoges.com
+AuthorURL: https://dmoges.com
 Category: dmoges
 Status: published
 Cover: https://dmoges.com/images/sao-bsides-ballarat-2026/image-5.png

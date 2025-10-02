@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: Hardware, Retrocomputing
 Status: Published
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: https://obsoletenerd.com/images/2018-10-15-CSIRAC-7.jpg
 ---
 

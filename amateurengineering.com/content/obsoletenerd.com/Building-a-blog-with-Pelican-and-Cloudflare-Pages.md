@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: Software, Projects, Projects
 Status: Published
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: /images/placeholder.jpg
 ---
 

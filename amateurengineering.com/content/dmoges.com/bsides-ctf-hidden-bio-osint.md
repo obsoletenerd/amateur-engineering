@@ -3,7 +3,7 @@ Title: BSides 2025 CTF: Hidden Bio Picture - OSINT Challenge
 Date: 2025-07-09T14:00:00+10:00
 Tags: ctf, cybersecurity, bsides2025
 Author: dmoges
-Author-URL: https://dmoges.com
+AuthorURL: https://dmoges.com
 Category: dmoges
 Status: published
 Cover: https://dmoges.com/images/bsides-ctf-hidden-bio-osint/image.png

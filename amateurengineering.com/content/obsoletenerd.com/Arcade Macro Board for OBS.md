@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: Projects, Hardware, Software, 3DPrinting, Projects
 Status: Published
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: https://obsoletenerd.com/images/2020-05-15-Arcade-Macro-Board-ArcadeMacroKeyboard1.jpg
 ---
 

@@ -7,7 +7,7 @@ Category: ObsoleteNerd
 Tags: CTF, Misc
 Status: Published
 Author: ObsoleteNerd
-Author-URL: https://obsoletenerd.com
+AuthorURL: https://obsoletenerd.com
 Cover: https://obsoletenerd.com/images/2022-09-01-ASD-50c-Coin-7.png
 ---
 
