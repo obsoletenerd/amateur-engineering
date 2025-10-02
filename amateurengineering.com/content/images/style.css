@@ -58,11 +58,11 @@ header.header img {
 /* tablet breakpoint */
 @media (min-width: 768px) {
     .grid-wrapper {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
-            "header header header"
-            "left-sidebar main-content main-content"
-            "footer footer footer";
+            "header header header header"
+            "left-sidebar main-content main-content main-content"
+            "footer footer footer footer";
     }
 }
 
