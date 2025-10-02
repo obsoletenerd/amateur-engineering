@@ -167,6 +167,60 @@ def cleanup_sources_directory(sources_dir, author_name):
         print(f"Warning: Could not clean up sources directory {sources_dir}: {e}")
 
 
+def extract_last_image_url(content, domain=None):
+    """
+    Extract the last image URL from post content.
+    Returns the full URL of the last image found, or placeholder if none found.
+    """
+    image_urls = []
+
+    # Pattern for markdown images: ![alt](url)
+    md_pattern = re.compile(r'!\[[^\]]*\]\(([^)]+)\)')
+    md_matches = md_pattern.findall(content)
+    image_urls.extend(md_matches)
+
+    # Pattern for HTML img tags: <img ... src="url" ...>
+    html_pattern = re.compile(r'<img[^>]+src=["\']([^"\']+)["\'][^>]*>', re.IGNORECASE)
+    html_matches = html_pattern.findall(content)
+    image_urls.extend(html_matches)
+
+    # Pattern for Hugo figure shortcodes: {{< figure src="url" ... >}}
+    hugo_pattern = re.compile(r'\{\{<\s*figure\s+src=["\']([^"\']+)["\']', re.IGNORECASE)
+    hugo_matches = hugo_pattern.findall(content)
+    image_urls.extend(hugo_matches)
+
+    # Pattern for Pelican static paths: {static}/path
+    static_pattern = re.compile(r'\{static\}(/[^"\s)>]+)')
+    static_matches = static_pattern.findall(content)
+    if domain:
+        # Convert static paths to absolute URLs
+        static_urls = [f"https://{domain}{path}" for path in static_matches]
+        image_urls.extend(static_urls)
+    else:
+        image_urls.extend(static_matches)
+
+    # Convert relative URLs to absolute URLs if domain is provided
+    if domain:
+        absolute_urls = []
+        for url in image_urls:
+            if url.startswith('/') and not url.startswith('//'):
+                # Relative path, make it absolute
+                absolute_urls.append(f"https://{domain}{url}")
+            elif url.startswith('http://') or url.startswith('https://'):
+                # Already absolute
+                absolute_urls.append(url)
+            else:
+                # Relative path without leading slash, make it absolute
+                absolute_urls.append(f"https://{domain}/{url}")
+        image_urls = absolute_urls
+
+    # Return the last image URL found, or placeholder if none
+    if image_urls:
+        return image_urls[-1]
+    else:
+        return "/images/placeholder.jpg"
+
+
 def copy_markdown_files(source_dir, dest_dir):
     """
     Recursively copy all .md files from source_dir to dest_dir.
@@ -256,6 +310,10 @@ def process_pelican_metadata(file_path, author_name, author_url, domain):
         # Set combined tags (original tags + original categories)
         if all_tags:
             metadata_dict['Tags'] = ', '.join(all_tags)
+
+        # Extract cover image from post content
+        cover_image_url = extract_last_image_url(body_section, domain)
+        metadata_dict['Cover'] = cover_image_url
 
         # Convert relative image paths to absolute URLs
         # Look for ![alt](path), <img src="path">, and {static}/path patterns
@@ -426,6 +484,10 @@ def process_hugo_metadata(file_path, author_name, author_url, domain):
         pelican_metadata['Author-URL'] = author_url
         pelican_metadata['Category'] = author_name  # Use author name as category
         pelican_metadata['Status'] = 'published'
+
+        # Extract cover image from post content
+        cover_image_url = extract_last_image_url(body_section, domain)
+        pelican_metadata['Cover'] = cover_image_url
 
         # Convert relative image paths to absolute URLs
         # Look for ![alt](path), <img src="path">, and Hugo shortcodes
@@ -721,8 +783,8 @@ def fetch_and_parse_rss(rss_url):
                 entry['date'] = date_elem.text if date_elem is not None else ''
 
             # Clean up HTML entities and content
-            entry['title'] = html.unescape(entry['title'].strip())
-            entry['content'] = html.unescape(entry['content'].strip()) if entry['content'] else ''
+            entry['title'] = html.unescape(entry['title']).strip() if entry['title'] else ''
+            entry['content'] = html.unescape(entry['content']).strip() if entry['content'] else ''
 
             # Skip entries without title (but now we should always have some kind of title)
             if entry['title'] and entry['title'].strip():
@@ -771,6 +833,10 @@ def create_rss_markdown_file(entry, output_dir, author_name, author_url):
         # Add original URL if available
         if entry['link']:
             content_lines.append(f"Original-URL: {entry['link']}")
+
+        # Extract cover image from entry content (no domain since RSS content may have absolute URLs)
+        cover_image_url = extract_last_image_url(entry['content'] or '', None)
+        content_lines.append(f"Cover: {cover_image_url}")
 
         # Create summary from content (first 200 chars)
         if entry['content']:
