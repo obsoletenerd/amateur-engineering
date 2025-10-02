@@ -70,7 +70,7 @@ header.header img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px; /* Adjust padding as needed */
+    padding: 10px;
     font-size: 0.75rem;
 }
 
@@ -91,4 +91,12 @@ header.header img {
 
 main.main-content article header {
     font-weight: bold;
+}
+
+article > footer {
+    padding: 5px 20px;
+}
+article > footer > p {
+    padding: 0;
+    margin: 0;
 }
