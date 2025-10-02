@@ -152,6 +152,18 @@ def get_git_clone_url(posts_url):
     return None
 
 
+def cleanup_sources_directory(sources_dir, author_name):
+    """
+    Clean up the sources directory after processing a user.
+    """
+    try:
+        if os.path.exists(sources_dir):
+            shutil.rmtree(sources_dir)
+            print(f"Cleaned up sources directory for {author_name}: {sources_dir}")
+    except Exception as e:
+        print(f"Warning: Could not clean up sources directory {sources_dir}: {e}")
+
+
 def copy_markdown_files(source_dir, dest_dir):
     """
     Recursively copy all .md files from source_dir to dest_dir.
@@ -313,6 +325,8 @@ def get_pelican(member, force_refresh=False):
 
     if not copied_files:
         print(f"No markdown files found to copy for {member['author']}")
+        # Clean up the sources directory even if no files were found
+        cleanup_sources_directory(sources_dir, member['author'])
         return False
 
     # Process each copied file to update metadata and image paths
@@ -323,6 +337,10 @@ def get_pelican(member, force_refresh=False):
         process_pelican_metadata(file_path, author_name, author_url, domain)
 
     print(f"Successfully processed {len(copied_files)} posts for {member['author']}")
+
+    # Clean up the sources directory after successful processing
+    cleanup_sources_directory(sources_dir, member['author'])
+
     return True
 
 
@@ -406,6 +424,8 @@ def main():
         elif info["type"] == "hugo" and not args.pelican_only:
             print(f'Member {i} is "{info["author"]}" {info["action_description"]}')
             print("Hugo processing not yet implemented.")
+            # TODO: When implementing get_hugo(), ensure it includes cleanup_sources_directory() calls
+            # similar to get_pelican() to clean up after processing each user
         elif not args.pelican_only:
             print(f'Member {i} is "{info["author"]}" {info["action_description"]}')
 
