@@ -9,7 +9,7 @@ Goals:
     - If they have defined an RSS feed, use the get_rss() function, which puts the RSS feed items into their own post files with "Author-Source: RSS" in the metadata for us to style later.
     - For Hugo and Pelican, clone the user repos and copy their post content files into /sources/userdomain.tld/ in their original format
     - Convert each file to suit Pelican's metadata/markdown requrements, and then copy to /content/userdomain.tld/
-        - Modify their metadata to suit, converting the metadata formatting and add our specific fields we want such as "Author:" and their name, and "Author-URL:" and their website URL.
+        - Modify their metadata to suit, converting the metadata formatting and add our specific fields we want such as "Author:" and their name, and "AuthorURL:" and their website URL.
         - Convert image paths to absolute paths with the user's domain at the start, this may require tweaking per blog to suit how authors do their image paths.
     - When all the post files are converted to Pelican markdown and in the /content/userdomain.tld/ folders, we can push to git for CI/CD to take over.
 
@@ -255,7 +255,7 @@ def copy_markdown_files(source_dir, dest_dir):
 def process_pelican_metadata(file_path, author_name, author_url, domain):
     """
     Process a Pelican markdown file to ensure proper metadata format.
-    Updates Author and Author-URL fields, and converts image paths to absolute URLs.
+    Updates Author and AuthorURL fields, and converts image paths to absolute URLs.
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -304,7 +304,7 @@ def process_pelican_metadata(file_path, author_name, author_url, domain):
 
         # Update/add our required fields
         metadata_dict['Author'] = author_name
-        metadata_dict['Author-URL'] = author_url
+        metadata_dict['AuthorURL'] = author_url
         metadata_dict['Category'] = author_name  # Use author name as category
 
         # Set combined tags (original tags + original categories)
@@ -366,7 +366,7 @@ def process_hugo_metadata(file_path, author_name, author_url, domain):
     """
     Process a Hugo markdown file and convert it to Pelican format.
     Converts Hugo frontmatter (--- or +++) to Pelican metadata format.
-    Updates Author and Author-URL fields, and converts image paths to absolute URLs.
+    Updates Author and AuthorURL fields, and converts image paths to absolute URLs.
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -481,7 +481,7 @@ def process_hugo_metadata(file_path, author_name, author_url, domain):
 
         # Add our required fields
         pelican_metadata['Author'] = author_name
-        pelican_metadata['Author-URL'] = author_url
+        pelican_metadata['AuthorURL'] = author_url
         pelican_metadata['Category'] = author_name  # Use author name as category
         pelican_metadata['Status'] = 'published'
 
@@ -823,7 +823,7 @@ def create_rss_markdown_file(entry, output_dir, author_name, author_url):
             "---",
             f"Title: {entry['title']}",
             f"Author: {author_name}",
-            f"Author-URL: {author_url}",
+            f"AuthorURL: {author_url}",
             f"Date: {pelican_date}",
             f"Category: {author_name}",
             "Source: RSS",
