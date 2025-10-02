@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 
-MEMBERS_JSON_URL = "https://raw.githubusercontent.com/obsoletenerd/amateur-engineering/refs/heads/main/ae-scraper/members.json"
+MEMBERS_JSON_URL = "https://raw.githubusercontent.com/obsoletenerd/amateur-engineering/refs/heads/main/contributors.json"
 OUTPUT_BASE_DIR = "content"
 SOURCES_DIR = "sources"
 
