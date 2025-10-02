@@ -3,8 +3,8 @@ Title: Pelican and Jinja Tips and Hacks
 Date: 2025-07-27 16:16
 Modified: 2025-07-27 16:16
 Summary: In this post I go over some of the hacks and customisations I've done to this site's back-end (Pelican), and the Jinja templates used inside it. None of them are anything ground-breaking, but they're things I had to figure out along the way so I figured someone else might learn from them one day (... if searching the web for help still stays a thing post-AIpocalypse).
-Category: Projects
-Tags: Software, Projects
+Category: ObsoleteNerd
+Tags: Software, Projects, Projects
 Status: Draft
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com

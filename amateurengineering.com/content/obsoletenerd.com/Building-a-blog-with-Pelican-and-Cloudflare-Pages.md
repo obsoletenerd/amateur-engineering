@@ -3,8 +3,8 @@ Title: Building a personal website using Pelican and Cloudflare
 Date: 2025-07-24 11:33
 Modified: 2025-07-27 15:26
 Summary: How I built this personal website and static blog with automated build-process and effectively-free hosting, using Markdown-formatted text files to write the posts, Pelican/Python to incorporate Jinja templates and build static HTML output, GitHub for version control and source hosting, and Cloudflare pages to serve the static content to the web on my personald domain name. This post will evolve into more of a tutorial/guide later. For now it is a dumping ground for my notes as I build out the site. These are the steps I took to spin up this very website. It took about 2 hours start-to-finish.
-Category: Projects
-Tags: Software, Projects
+Category: ObsoleteNerd
+Tags: Software, Projects, Projects
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com

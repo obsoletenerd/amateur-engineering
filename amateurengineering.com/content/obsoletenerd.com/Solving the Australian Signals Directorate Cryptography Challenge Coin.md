@@ -3,8 +3,8 @@ Title: Solving the Australian Signals Directorate Cryptography Challenge Coin
 Date: 2022-09-01 13:37
 Modified: 2022-09-01 13:37
 Summary: Today the Australian Signals Directorate announced their 75th Anniversary Commemorative Coin, which is a standard Australian 50 cent coin with various cryptographic puzzles embedded in it. I'm not a cryptography expert, but I've always loved this stuff from the sidelines of physical pentesting and teen-years script-kiddying, so I thought I'd give it a go. Along with a mate in our local Hackerspace's slack channel, we started bouncing ideas back and forth, and below is a write-up of the eventual path to solving all the puzzles on the coin (though as you'll see, not necessarily in the order they intended).
-Category: Misc
-Tags: CTF
+Category: ObsoleteNerd
+Tags: CTF, Misc
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com

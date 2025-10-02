@@ -3,8 +3,8 @@ Title: Arcade Macro Board for OBS
 Date: 2020-05-15 11:21
 Modified: 2020-05-15 11:21
 Summary: Since the coronapocalypse kicked in and we've all been isolated, I've been doing a lot of Jitsi meets with various groups of friends. Jitsi is basically Zoom but with less spyware and more "it crashes lots and has lots of bugs but it's Open Source so we convince ourselves it's worth it anyway". In this post we use some old arcade cabinet buttons and an Arduino to build an OBS scene-changing macro board. This lets you swap scenes in video chats and when streaming, or also just works as a generic macro-board for running key combinations, scripts, and macros on any USB-having device.
-Category: Projects
-Tags: Projects, Hardware, Software, 3DPrinting
+Category: ObsoleteNerd
+Tags: Projects, Hardware, Software, 3DPrinting, Projects
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com

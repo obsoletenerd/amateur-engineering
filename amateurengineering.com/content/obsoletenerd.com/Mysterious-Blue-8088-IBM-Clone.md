@@ -3,8 +3,8 @@ Title: Mysterious Blue 8088 IBM Clone
 Date: 2025-05-27 20:10
 Modified: 2025-05-27 20:10
 Summary: I stumbled on this all-blue IBM PC XT clone that I haven't been able to find any information about, no matter how much I dig online. The only identifying label is on the bottom of the keyboard, which was made by Nan Tan Computer Co in Taiwan, but there is no record of them ever making desktop PCs. The keyboard is the exact same blue as the rest of the PC so was clearly along with the rest of the machine.
-Category: Retrocomputing
-Tags: Hardware, Museum
+Category: ObsoleteNerd
+Tags: Hardware, Museum, Retrocomputing
 Status: Published
 Author: ObsoleteNerd
 Author-URL: https://obsoletenerd.com
