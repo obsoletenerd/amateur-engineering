@@ -4,8 +4,7 @@ SITESUBTITLE = '"Perfect is the enemy of done"'
 SITEURL = ""
 
 PATH = "content"
-STATIC_PATHS = []
-USE_FOLDER_AS_CATEGORY = True
+STATIC_PATHS = ["../files"]
 
 TIMEZONE = 'Australia/Melbourne'
 
@@ -37,6 +36,3 @@ SOCIAL = (
 )
 
 DEFAULT_PAGINATION = 25
-
-# Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True

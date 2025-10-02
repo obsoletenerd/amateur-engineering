@@ -6,7 +6,7 @@
 
 {% for article in articles_page.object_list %}
 <article>
-    <header style="background: url("{{ article.cover }}") no-repeat center top; background-size: 100% auto; opacity: 0.25">
+    <header style="background: url({{ article.cover }}) no-repeat center top; background-size: 100% auto; opacity: 0.25">
         <h2>
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
         </h2>
