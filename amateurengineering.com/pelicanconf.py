@@ -4,7 +4,7 @@ SITESUBTITLE = '"Perfect is the enemy of done"'
 SITEURL = ""
 
 PATH = "content"
-STATIC_PATHS = ['images','css']
+STATIC_PATHS = ['../images','../css']
 USE_FOLDER_AS_CATEGORY = True
 
 TIMEZONE = 'Australia/Melbourne'
