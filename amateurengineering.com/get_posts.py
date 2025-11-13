@@ -66,7 +66,7 @@ def parse_git_url(posts_url):
 
 def get_member_type_info(member):
     """
-    Analyze a member entry and return information about what actions would be taken.
+    Analyze members from contributors.json and return information about what actions would be taken.
     """
     member_type = member.get("type", "unknown")
     name = member.get("name", "Unknown")
@@ -86,7 +86,7 @@ def get_member_type_info(member):
     }
 
     if member_type == "rss":
-        info["action_description"] = f'is an RSS feed from the website "{url}". This will be added as a mini-post to the RSS category in our Pelican blog.'
+        info["action_description"] = f'is an RSS feed from the website "{url}". This will be added as a mini-post to the RSS category.'
 
     elif member_type in ["pelican", "hugo"]:
         platform, repo_name, path = parse_git_url(posts_url)
@@ -169,7 +169,7 @@ def cleanup_sources_directory(sources_dir, author_name):
 
 def extract_last_image_url(content, domain=None):
     """
-    Extract the last image URL from post content.
+    Extract the last image URL from post content so we can use it as a cover/thumbnail.
     Returns the full URL of the last image found, or placeholder if none found.
     """
     image_urls = []
@@ -178,6 +178,8 @@ def extract_last_image_url(content, domain=None):
     md_pattern = re.compile(r'!\[[^\]]*\]\(([^)]+)\)')
     md_matches = md_pattern.findall(content)
     image_urls.extend(md_matches)
+
+    # There's gotta be a better way to do this...
 
     # Pattern for HTML img tags: <img ... src="url" ...>
     html_pattern = re.compile(r'<img[^>]+src=["\']([^"\']+)["\'][^>]*>', re.IGNORECASE)
