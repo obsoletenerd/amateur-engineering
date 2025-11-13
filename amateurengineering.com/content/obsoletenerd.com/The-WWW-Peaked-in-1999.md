@@ -25,7 +25,7 @@ This website works on all hardware, all operating systems, all screen types and 
 
 I still use modern technologies [/building-a-personal-website-using-pelican-and-cloudflare](to build and host it) because it's always good to learn new technologies and use them where they're needed, but I used to host this exact same static HTML/CSS from a Raspberry Pi and what the user receives is no different.
 
-<h4>This website isn't broken, [it's perfect](https://motherfuckingwebsite.com).</h4>
+#### This website isn't broken, [it's perfect](https://motherfuckingwebsite.com).
 
 This whole thing is pretty tongue in cheek. I love what modern technology has given us, especially the hardware, portability, etc. But as a web developer and internet addict of 30+ years, I honestly despise where the WWW itself has gone. Back in my day, we hiked to school up hill both wa... I mean, we had to shave every single *byte* off every single image to make sites load faster and work for more people, and every single pixel "mattered" because it gave the user a better experience. Now you'll get a splash page for a local business that's just text and images, but takes 12 seconds to load on my 1.5Gbps connection with 32 cores and 64Gb of RAM, and my CPU starts heating up my room. Websites designed to give you information went from text-heavy bandwidth-light data havens, to now become monostrous ad-bloated content-light cesspools of user-hostility and corporate greed, injecting literally dozens (sometimes hundreds) of trackers and user-fingerprinting scripts to steal and sell as much of your data as possible.
 
