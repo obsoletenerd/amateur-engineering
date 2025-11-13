@@ -6,16 +6,7 @@
 
 {% for article in articles_page.object_list %}
 <article>
-  <header
-    style="
-      background-image:
-        linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.40)),
-        url('{{ article.cover|e }}');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover; /* better than 100% auto for random sizes */
-    "
-  >
+  <header style="background-image: linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.40)), url('{{ article.cover|e }}'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
     <h2>
       <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
          title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
