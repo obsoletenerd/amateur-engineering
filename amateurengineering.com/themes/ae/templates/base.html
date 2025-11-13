@@ -98,14 +98,13 @@
                 <hgroup>
                     <h4>Introduction</h4>
                     <p>
-                        This site is a collection of makers, hackers, tinkerers, and creators of all types writing about their
-                        hardware and software projects.
+                        This website is a collection of makers, hackers, tinkerers, and creators of all types writing about their hardware and software projects. Initially created by members of the <a href="https://www.ballarathackerspace.org.au">Ballarat Hackerspace</a> but open to all who are keen to share their personal projects.
                     </p>
                 </hgroup>
                 {% block nav %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                 <hgroup>
-                    <h3>Pages</h3>
+                    <h4>Pages</h4>
                     <nav>
                         <ul>
                             {% for p in pages %}
@@ -120,7 +119,7 @@
                 </hgroup>
                 {% endif %} {% if DISPLAY_CATEGORIES_ON_MENU %}
                 <hgroup>
-                    <h3>Contributors</h3>
+                    <h4>Contributors</h4>
                     <nav>
                         <ul>
                             {% for cat, null in categories %}
