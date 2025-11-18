@@ -14,7 +14,7 @@ Goals:
     - When all the post files are converted to Pelican markdown and in the /content/userdomain.tld/ folders, we can push to git for CI/CD to take over.
 
 Status:
-    - Currently (kinda) works for blogs that are already Pelican formatted.
+    - Currently (kinda) works for blogs that are already Pelican formatted or use similar formatting.
 """
 
 
