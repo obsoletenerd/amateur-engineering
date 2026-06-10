@@ -1,0 +1,9 @@
+// Stop Zed from trying to format Jinja templates as normal HTML
+{
+  "languages": {
+    "HTML": {
+      "format_on_save": "off",
+      "code_actions_on_format": {},
+    },
+  },
+}
