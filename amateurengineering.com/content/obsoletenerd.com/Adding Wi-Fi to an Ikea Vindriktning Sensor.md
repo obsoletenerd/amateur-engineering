@@ -35,7 +35,7 @@ Solder the other ends of the wires to the ESP8266. 5v to 5v, GND to GND, and RES
 
 Once the wires are soldered in, that's it... you reconnect and reassemble everything.
 
-<img alt="Soldering wires to the ESP8266" src="https://obsoletenerd.com/images/2022-07-20-ESP8266-to-Ikea-Vindriktning.jpg" width="49%"><img alt="Re-assembling the completed sensor" src="https://obsoletenerd.com/images/content/images/2022-07-20-Reconnecting-Ikea-Vindriktning.jpg" width="49%">
+<img alt="Soldering wires to the ESP8266" src="https://obsoletenerd.com/images/2022-07-20-ESP8266-to-Ikea-Vindriktning.jpg" width="49%"><img alt="Re-assembling the completed sensor" src="https://obsoletenerd.com/images/2022-07-20-Reconnecting-Ikea-Vindriktning.jpg" width="49%">
 
 You can then [flash ESPHome](https://esphome.io/guides/getting_started_hassio/#installing-esphome-dashboard) onto your ESP8266 if you have Home Assistant or other home automation, or to serve it up via API to your other devices. There's [lots of tutorials](https://esphome.io/components/sensor/pm1006/) for this part as it is now just a very basic wireless sensor. I'm not going to re-write what's been written a thousand times, I mostly just put this post up to tick another project post off my list.
 
