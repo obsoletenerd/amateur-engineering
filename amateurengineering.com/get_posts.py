@@ -575,9 +575,11 @@ def get_hugo(member, force_refresh=False):
     content_dir = os.path.join(script_dir, OUTPUT_BASE_DIR, domain)
 
     # Check if already processed (skip if content directory already exists)
-    if os.path.exists(content_dir) and not force_refresh:
-        print(f"Content directory already exists for {member['author']}, skipping...")
-        return True
+    if os.path.exists(content_dir):
+        if not force_refresh:
+            print(f"Content directory already exists for {member['author']}, skipping...")
+            return True
+        shutil.rmtree(content_dir)
 
     # Clone the repository
     if not clone_git_repo(clone_url, sources_dir):
@@ -982,9 +984,11 @@ def get_pelican(member, force_refresh=False):
     content_dir = os.path.join(script_dir, OUTPUT_BASE_DIR, domain)
 
     # Check if already processed (skip if content directory already exists)
-    if os.path.exists(content_dir) and not force_refresh:
-        print(f"Content directory already exists for {member['author']}, skipping...")
-        return True
+    if os.path.exists(content_dir):
+        if not force_refresh:
+            print(f"Content directory already exists for {member['author']}, skipping...")
+            return True
+        shutil.rmtree(content_dir)
 
     # Clone the repository
     if not clone_git_repo(clone_url, sources_dir):
