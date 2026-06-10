@@ -1,7 +1,7 @@
 ---
 Title: BSides 2025 CTF: Barcode Basics - Code39 Challenge
 Date: 2025-07-09T13:30:00+10:00
-Tags: ctf, cybersecurity, bsides2025
+Tags: ctf, steganography, barcode, python, bsides
 Author: dmoges
 AuthorURL: https://dmoges.com
 Category: dmoges
@@ -9,7 +9,7 @@ Status: published
 Cover: https://dmoges.com/images/bsides-ctf-barcode-basics/barcode.png
 ---
 
-The Barcode challen was one of the first challenges I thought of when I started planning the BSides CTF 2025. It is a simple challenge that introduces participants to barcode analysis and decoding, specifically focusing on Code39 barcodes.
+The Barcode challenge was one of the first challenges I thought of when I started planning the BSides CTF 2025. It is a simple challenge that introduces participants to barcode analysis and decoding, specifically focusing on Code39 barcodes.
 However I threw some extra complexity in there to mess with people a bit.
 
 ## Challenge Details
@@ -53,7 +53,7 @@ The barcode is on the Gold Rush Security website, which is a fictional company c
 The barcode itself is a part of a user card for a fictional employee named Marcus.
 It says so on the card.
 
-If you poke around the site a little, you'll see his bio on the page, telling you he is the Chief Techncial Officer, and his full name is Dr Marcus Cipher.
+If you poke around the site a little, you'll see his bio on the page, telling you he is the Chief Technical Officer, and his full name is Dr Marcus Cipher.
 The login to the Client Portal tells you that usernames are first initial and last name, so you can guess that his username is `mcipher`.
 From here, we just need a password, which is what's encoded in the barcode.
 
@@ -70,7 +70,7 @@ This should get you `S3CUR3D8YG` at the start, and `RU$HK` at the end.
 The K is just to throw you.
 The G in the start is too obscured to be read automatically, but nearly all bars are present, so it can be deduced.
 In classic leetspeak, this reads as "Secured By G" and "Rush".
-Based on the width of the obscured part, there 3 letters hidden.
+Based on the width of the obscured part, there are 3 letters hidden.
 
 To self-verify, the first few letters are under the barcode as well, so you can see the `S3CU` as means of self-checking your decoding.
 
@@ -112,6 +112,6 @@ I spent a lot of time moving the card on top of the barcode to obscure just enou
 Overall I was happy with the result, but I think a partial credit would have helped, to encourage people that have it partially right.
 
 One of the challenges we scrapped as it was too difficult was a QR code that had a password encoded in it.
-While QR codes have error-correction, I couldn't get the challenge enough - the best I had was a many-hour long brute-force error correction attempt!
+While QR codes have error-correction, I couldn't get the challenge working well enough - the best I had was a many-hour long brute-force error correction attempt!
 
 I'll probably do something similar in next year's CTF, with the learnings applied from this challenge.

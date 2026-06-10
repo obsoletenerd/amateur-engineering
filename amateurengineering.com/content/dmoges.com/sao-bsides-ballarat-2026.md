@@ -2,7 +2,7 @@
 Title: SAO BSides Ballarat 2026
 Date: 2025-09-04T15:00:00+10:00
 Summary: A simple SAO (Simple Add-On) I designed for BSides Ballarat 2026
-Tags: hardware, bsides, sao, bsides-2026, ballarat
+Tags: hardware, bsides, sao, bsides2026, ballarat
 Author: dmoges
 AuthorURL: https://dmoges.com
 Category: dmoges
@@ -22,20 +22,20 @@ The two GPIO pins can be used for anything, but they are typically used for butt
 
 For more information, check out the [SAO specification](https://hackaday.io/project/175182-simple-add-ons-sao) on hackaday.
 
-The idea is *keep it simple* - its easy to do, and you can make it yourself on the day with a soldering iron and some basic components.
+The idea is *keep it simple* - it's easy to do, and you can make it yourself on the day with a soldering iron and some basic components.
 
 ## My first SAO
 
 My first SAO is simple, just a LED connected to power.
 My first idea was simpler component wise, just a resistor and standard LED, but Firnsy suggested using a "smart" LED, specifically a WS2812B addressable RGB LED.
-This is slightly more complicated to setup, but actually makes the wiring easier.
+This is slightly more complicated to set up, but actually makes the wiring easier.
 
 Here's the schematic I came up with:
 
 ![SAO Schematic. Simple, with just a passthrough on the SAO connector, and a WS2812B addressable RGB LED connected to pin 5 and power](https://dmoges.com/images/sao-bsides-ballarat-2026/image.png)
 
 Note that most of the wiring is just for the pass-through, so you can chain SAOs if you wanted to.
-If you removed this, its just power (both VCC and GND) and the data line for the LED coming from pin 5.
+If you removed this, it's just power (both VCC and GND) and the data line for the LED coming from pin 5.
 
 This PCB can be reused for heaps of simpler SAOs, because 90% of the board is the design in this case. Here's the design:
 

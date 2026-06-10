@@ -10,6 +10,12 @@ New members are always welcome. If you're a maker/hacker/tinkerer of any kind, f
 
 ## Technical Notes
 
+Run the `get_posts.py` script to check for new posts on member blogs.
+
+Push to Github and GitHub actions then builds the static content and pushes that output to AmateurEngineering.com 
+
+For local testing:
+
 Build the blog locally with `uv run pelican content`
 
 Run local dev server with `uv run pelican -r -l` then access at `http://127.0.0.1:8000`
