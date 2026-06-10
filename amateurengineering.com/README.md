@@ -10,11 +10,11 @@ New members are always welcome. If you're a maker/hacker/tinkerer of any kind, f
 
 ## Technical Notes
 
-Run the `get_posts.py` script to check for new posts on member blogs.
-
-Push to Github and GitHub actions then builds the static content and pushes that output to AmateurEngineering.com 
+GitHub action runs `get_posts.py` daily, scraping new posts from any member blogs and pulling the markdown sources into this Pelican install. A Cloudflare worker then watches for new commits and rebuilds the Pelican static-site if it finds new content, and deploys the static output to AmateurEngineering.com.
 
 For local testing:
+
+Run the `get_posts.py` script to check for new posts on member blogs.
 
 Build the blog locally with `uv run pelican content`
 
