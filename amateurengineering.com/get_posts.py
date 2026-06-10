@@ -900,9 +900,13 @@ def get_rss(member, force_refresh=False):
     content_dir = os.path.join(script_dir, OUTPUT_BASE_DIR, domain)
 
     # Check if already processed (skip if content directory already exists)
-    if os.path.exists(content_dir) and not force_refresh:
-        print(f"Content directory already exists for {member['author']}, skipping...")
-        return True
+    if os.path.exists(content_dir):
+        if not force_refresh:
+            print(f"Content directory already exists for {member['author']}, skipping...")
+            return True
+        # On force refresh, start clean so re-created entries don't get
+        # "-1", "-2" duplicate-filename suffixes from the existing files
+        shutil.rmtree(content_dir)
 
     # Get the RSS feed URL (check both 'posts' and 'rss' fields)
     rss_url = member.get("posts", "") or member.get("rss", "")
