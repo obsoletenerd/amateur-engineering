@@ -1,0 +1,38 @@
+name: Aggregate member posts
+
+on:
+  schedule:
+    # Daily at 20:00 UTC (~6am AEST)
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aggregate-posts
+  cancel-in-progress: false
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Fetch and convert member posts
+        working-directory: amateurengineering.com
+        run: uv run get_posts.py --force
+
+      - name: Commit new posts
+        run: |
+          git add amateurengineering.com/content
+          if git diff --cached --quiet; then
+            echo "No new posts."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Aggregate new member posts"
+          git push
